@@ -1,19 +1,16 @@
-//start of js
+function generatePixel(size) {
+  const container = document.querySelector(".container");
 
-const container = document.querySelector('container')
-const grid = document.createElement('div')
-
-const grid_size = 16
-
-const createGrid = (gridSize) => {
-  for (let i = 0; i < gridSize; i++) {
-    for (let j = 0; j < gridSize; j++) {
-      const gridItem = document.createElement('div');
-      gridItem.classList.add('grid-item');
-      gridItem.textContent = `Row ${i + 1}, Column ${j + 1}`;
-      container.appendChild(gridItem);
+  for (let column = 0; column < size; column++) {
+    const div_container = document.createElement("div");
+    div_container.classList.add("div_container");
+    container.appendChild(div_container);
+    for (let row = 0; row < size; row++) {
+      const pixel = document.createElement("div");
+      pixel.classList.add("pixel");
+      div_container.appendChild(pixel);
     }
   }
 }
 
-createGrid(10)
+generatePixel(100);
