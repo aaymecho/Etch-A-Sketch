@@ -13,4 +13,4 @@ function generatePixel(size) {
   }
 }
 
-generatePixel(100);
+generatePixel(10);
